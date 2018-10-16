@@ -3,14 +3,16 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script>
       $(document).ready(function(){
-        $(".click").click(function(){
-          alert("success!");
+        $("#add").click(function(){
+          $("#todoList").append("<p>"+$("#enterList").val()+"</p>");
         })
       });
     </script>
 
   </head>
   <body>
-    <button class="click">test</button>
+    <input id="enterList"></input>
+    <button id="add">add</button>
+    <div id="todoList"></div>
   </body>
 </html>
